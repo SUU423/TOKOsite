@@ -1,0 +1,108 @@
+/*全体の配置決め*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    color: whitesmoke;
+}
+
+.social{
+    width: 40%;
+    background-image:url('https://picsum.photos/1000/800');
+    background-size: cover; 
+    background-position: center;
+    padding: 20px 20px;
+}
+
+main{
+     width: 60%;
+    background-color:#3b3833;
+}
+
+.contents{
+    min-height: 90vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    margin: 30px 30px;
+}
+
+.link, .train, .news, .column{
+    border-radius: 20px;
+    background-color: blue;
+    height: 100%;
+    padding: 5% 5%;
+}
+
+/*ソーシャルエリアの調整*/
+.socialdiv{
+     flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.205);
+    border-radius: 10px;
+    padding: 5px 5px;
+}
+
+.social h1{
+    font-size: 50px;
+}
+
+.timearea{
+    font-size: 130px;
+}
+
+.datearea{
+    font-size: 35px;
+}
+/*リンクエリアの調整*/
+.link{
+    background-color:#5a728b;
+}
+
+.linkdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+h2{
+    margin-bottom: 5%;
+}
+
+.a{
+    display: block;
+}
+
+img{
+    width: 120px;
+    border-radius: 10px;
+}
+/*電車エリアの調整*/
+.train{
+    background-color:#c59c6c;
+
+}
+
+.traindiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20%;
+}
+/*ニュースエリアの調整*/
+.news{
+    background-color: #ffdd85;
+}
+/*コラムエリアの調整*/
+.column{
+    background-color: #e2694c;
+}
