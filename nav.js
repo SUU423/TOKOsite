@@ -56,10 +56,10 @@ const Train = () => {
     const JRShimizutrain = JRShimizu.find(time => time > nowTime);
     const STShizuokatrain = STShizuoka.find(time => time > nowTime);
     const STShimizutrain = STShimizu.find(time => time > nowTime);
-    document.getElementById('train1').textContent = `next :${JRShizuokatrain}`;
-    document.getElementById('train2').textContent = `next :${JRShimizutrain}`;
-    document.getElementById('train3').textContent = `next :${STShizuokatrain}`;
-    document.getElementById('train4').textContent = `next :${STShimizutrain}`;
+    document.getElementById('train1').textContent = `next ${JRShizuokatrain}`;
+    document.getElementById('train2').textContent = `next ${JRShimizutrain}`;
+    document.getElementById('train3').textContent = `next ${STShizuokatrain}`;
+    document.getElementById('train4').textContent = `next ${STShimizutrain}`;
 };
 Train();
 // 1分ごと（60000ミリ秒）に再計算してカウントダウンを更新する
