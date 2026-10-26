@@ -12,12 +12,12 @@ window.addEventListener('DOMContentLoaded', async () => {
         console.log(articles);
         if (data.errors) {
             newsList.innerHTML = `
-                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; text-align: center; opacity: 0.8; padding: 20px; color: whitesmoke;">
+                <div>
                     <p style="font-weight: bold; margin-bottom: 8px;">⚠️ 本日のニュース取得上限に達しました</p>
                     <p style="font-size: 0.85em;">※明日午前9時に更新が再開されます</p>
                 </div>
             `;
-            return; // 👈 これが重要！ここで処理をストップさせる
+            return;
         }
 
         articles.forEach(article => {

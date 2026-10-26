@@ -367,5 +367,9 @@ img {
         margin: 3px 0;
     }
 
+    .columndiv .card:nth-child(2) {
+        display: none;
+    }
+
 
 }
