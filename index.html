@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>とこサイト</title>
     <link rel="stylesheet" href="style.css">
+    <script src="config.js" defer></script>
+    <script src="list.js" defer></script>
     <script src="social.js" defer></script>
+    <script src="nav.js" defer></script>
+
 </head>
 
 <body>
@@ -18,9 +22,9 @@
             </div>
             <div class="social2">
                 <div class="timearea" id="timearea"></div>
-                <div class="datearea" id="datearea"></div>
             </div>
             <div class="social3">
+                <div class="datearea" id="datearea"></div>
                 <div class="weatherarea" id="weatherarea"></div>
             </div>
         </div>
@@ -33,30 +37,44 @@
                 <h2>各種リンク</h2>
                 <div class="linkdiv" id="linkdiv">
                     <a href="https://unipa.tokoha-u.ac.jp/uprx/up/pk/pky001/Pky00101.xhtml" class="link1">
-                        <img src="img\UNIPAimg.png">
+                        <img src="img\UNIPA.png">
                     </a>
                     <a href="https://www.tokoha-u.ac.jp/" class="link2">
-                        <img src="img\HPimg.png">
+                        <img src="img\HP.png">
                     </a>
                 </div>
             </nav>
-
             <nav class="train">
                 <h2>電車運行情報（草薙駅）</h2>
                 <div class="traindiv" id="traindiv">
-                    <div>
-                        <h3>静岡方面</h3>
-                        <div class="train1" id="train2"></div>
+                    <div class="jr">
+                        <h3>JR草薙駅</h3>
+                        <div class="timejr">
+                            <div>
+                                <h3>静岡方面</h3>
+                                <div class="train1" id="train1"></div>
+                            </div>
+                            <div>
+                                <h3>清水方面</h3>
+                                <div class="train2" id="train2"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h3>清水方面</h3>
-                        <div class="train2" id="train2"></div>
+                    <div class="st">
+                        <h3>静鉄草薙駅</h3>
+                        <div class="timest">
+                            <div>
+                                <h3>新静岡方面</h3>
+                                <div class="train3" id="train3"></div>
+                            </div>
+                            <div>
+                                <h3>新清水方面</h3>
+                                <div class="train4" id="train4"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-
             </nav>
-
             <nav class="news">
                 <h2>最近のトピックス</h2>
                 <div class="newsdiv" id="newsdiv">
@@ -67,6 +85,7 @@
                 <h2>面白コラム</h2>
                 <div class="columndiv" id="columndiv"></div>
             </nav>
+
         </div>
 
     </main>
