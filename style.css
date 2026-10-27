@@ -139,6 +139,7 @@ h2 {
     width: 100%;
     flex: 1;
     min-height: 0;
+    margin: 10px;
 }
 
 .linkdiv {
@@ -195,7 +196,6 @@ img {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    padding: 10px 15px 15px;
     box-sizing: border-box;
 }
 
@@ -205,9 +205,9 @@ img {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 0% 5%;
     min-height: 0;
     flex: 1;
+    margin: 10px;
 }
 
 .jr,
@@ -266,6 +266,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin: 10px;
 }
 
 .newsdiv a {
@@ -296,13 +297,13 @@ img {
 /*コラムエリアの調整*/
 .column {
     background-color: #e2694c;
-    padding: 0 20px;
 }
 
 .columndiv {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin: 10px;
 }
 
 .columndiv a {
