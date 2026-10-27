@@ -1,10 +1,11 @@
 /*ニュース表示*/
 window.addEventListener('DOMContentLoaded', async () => {
     const apiKey = GNEWS_API_KEY;
-    const apiUrl = `https://gnews.io/api/v4/top-headlines?category=general&lang=ja&country=jp&max=4&apikey=${apiKey}`;
+    const targetUrl = `https://gnews.io/api/v4/top-headlines?category=general&lang=ja&country=jp&max=4&apikey=${apiKey}`;
     //const apiUrl = `https://gnews.io/api/v4/search?q=静岡 OR IT&lang=ja&country=jp&max=4&apikey=${apiKey}`;
+    const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
     try {
-        const response = await fetch(apiUrl);
+        const response = await fetch(proxyUrl);
         const data = await response.json();
         const articles = data.articles;
         const newsList = document.getElementById('newsdiv');
