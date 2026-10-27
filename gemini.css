@@ -298,3 +298,87 @@ main {
     border-radius: 8px;
     padding: 12px
 }
+
+
+
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+  }
+
+  .social {
+    width: 100%;
+    min-height: auto;
+    padding: 12px;
+  }
+
+  .socialdiv {
+    padding: 12px 16px;
+  }
+
+  .social1 h1 {
+    font-size: 1.6rem;
+  }
+
+  .timearea {
+    font-size: 4rem;
+    margin: 4px 0 8px 0;
+  }
+
+  .social3 {
+    font-size: 1.2rem;
+    gap: 12px;
+  }
+
+  .weatherimg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .temp {
+    font-size: 1.2rem;
+  }
+
+  main {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .contents {
+    gap: 12px;
+  }
+
+  .contents > nav {
+    border-radius: 22px;
+    padding: 14px 12px;
+  }
+
+  .contents > nav h2 {
+    font-size: 1.1rem;
+  }
+
+  .linkdiv a {
+    border-radius: 14px;
+  }
+
+  .search-input {
+    padding: 12px 14px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .timejr,
+  .timest {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .st {
+    display: none;
+  }
+
+  .card:nth-child(2) {
+    display: none;
+  }
+}
