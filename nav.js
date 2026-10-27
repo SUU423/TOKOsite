@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             newsList.innerHTML += htmlcode;
         });
     } catch (error) {
-        console.error('GNewsの取得エラー:', error);
+        console.error('GNewsが取得できてないよ:', error);
     }
 });
 
