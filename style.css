@@ -289,7 +289,7 @@ img {
     border-radius: 3px;
 }
 
-.newsdiv a{
+.newsdiv a {
     margin: 5px;
 }
 
@@ -322,7 +322,7 @@ img {
     font-size: clamp(14px, 2vw, 20px);
 }
 
-.column h2{
+.column h2 {
     margin-bottom: 20px;
 }
 
@@ -356,7 +356,7 @@ img {
 
     }
 
-    .train h3{
+    .train h3 {
         font-size: clamp(17px, 3vw, 20px);
     }
 
@@ -385,24 +385,24 @@ img {
         display: none;
     }
 
-    .st{
+    .st {
         display: none;
     }
 
-.news-img{
-    display: none;
-}
+    .news-img {
+        display: none;
+    }
 
-.news-link:nth-child(4){
-    display: none;
-}
+    .news-link:nth-child(4) {
+        display: none;
+    }
 
-.news-link:nth-child(3){
-    display: none;
-}
+    .news-link:nth-child(3) {
+        display: none;
+    }
 
-.news a{
-    margin: 0 5px;
-    padding: 0 3px;
-}
+    .news a {
+        margin: 0 5px;
+        padding: 0 3px;
+    }
 }
