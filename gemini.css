@@ -1,0 +1,300 @@
+@charset "UTF-8";
+
+/* =========================================
+   全体リセット・基本設定
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #36322f;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    color: #ffffff;
+}
+
+/* =========================================
+   左側（スマホでは上部）：時計・天気エリア (.social)
+========================================= */
+.social {
+    width: 40%;
+    min-height: 100vh;
+    background-image: url('https://picsum.photos/1000/800');
+    background-size: cover;
+    background-position: center;
+    padding: 16px;
+}
+
+.socialdiv {
+    background-color: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+
+.social1 h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+.timearea {
+    font-size: 5.2rem;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 0.03em;
+    margin: 8px 0 16px 0;
+}
+
+.social3 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.5rem;
+}
+
+.weatherarea {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.weatherimg {
+    width: 56px;
+    height: 56px;
+    background-color: rgba(255, 255, 255, 0.55);
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.temp {
+    font-size: 1.5rem;
+}
+
+/* =========================================
+   右側（スマホでは下部）：メインコンテンツ (.contents)
+========================================= */
+main {
+    width: 60%;
+    padding: 16px;
+    display: flex;
+}
+
+.contents {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 16px;
+}
+
+/* 各パネルの共通設定 */
+.contents>nav {
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contents>nav h2 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+}
+
+/* =========================================
+   1. 各種リンク (.link)
+========================================= */
+.link {
+    background-color: #5b758e;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.contents1 {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.linkdiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.linkdiv a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #384d6c;
+    border-radius: 10px;
+    padding: 12px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    aspect-ratio: 1 / 1;
+}
+
+.linkdiv a:hover {
+    opacity: 0.85;
+}
+
+.linkdiv img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.searchdiv form {
+    width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    outline: none;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* =========================================
+   2. 電車運行情報 (.train)
+========================================= */
+.train {
+    background-color: #c59b6d;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+.traindiv {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 1;
+}
+
+.jr,
+.st {
+    background-color: rgba(255, 255, 255, 0.16);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.jr>h3,
+.st>h3 {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+}
+
+.timejr,
+.timest {
+    display: flex;
+    justify-content: space-around;
+    gap: 12px;
+}
+
+.timejr h3,
+.timest h3 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.train1,
+.train2,
+.train3,
+.train4 {
+    font-size: 1.05rem;
+    font-weight: bold;
+}
+
+/* =========================================
+   3. 最近のトピックス (.news)
+========================================= */
+.news {
+    background-color: #d3c75c;
+    color: #222222;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+}
+
+.news h2 {
+    color: #222222;
+}
+
+.newsdiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.news-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.45);
+    padding: 8px 10px;
+    border-radius: 8px;
+    color: #222222;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: background-color 0.2s;
+}
+
+.news-link:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.news-img {
+    width: 56px;
+    height: 42px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.news-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4;
+}
+
+/* =========================================
+   4. 面白コラム (.column)
+========================================= */
+.column {
+    background-color: #e26343;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.columndiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 12px
+}
