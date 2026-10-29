@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
-/* =========================================
-   全体リセット・基本設定
-========================================= */
+/*基本設定 */
 * {
   margin: 0;
   padding: 0;
@@ -12,14 +10,12 @@
 body {
   display: flex;
   min-height: 100vh;
-  background-color: #1e2229; /* 深みのあるチャコールネイビー */
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background-color: #1e2229; 
   color: #f8f9fa;
 }
 
-/* =========================================
-   左側（スマホでは上部）：時計・天気エリア (.social)
-========================================= */
+
+/*ソーシャルエリア*/
 .social {
   width: 40%;
   min-height: 100vh;
@@ -31,8 +27,6 @@ body {
 
 .socialdiv {
    background-color: rgba(0, 0, 0, 0.205);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   padding: 18px 22px;
@@ -42,15 +36,12 @@ body {
 .social1 h1 {
   font-size: 2rem;
   font-weight: bold;
-  letter-spacing: 0.05em;
   margin-bottom: 4px;
 }
 
 .timearea {
   font-size: 5.2rem;
   font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: 0.03em;
   margin: 8px 0 16px 0;
 }
 
@@ -79,9 +70,8 @@ body {
   font-size: 1.5rem;
 }
 
-/* =========================================
-   右側（スマホでは下部）：メインコンテンツ (.contents)
-========================================= */
+
+/* 右or下側エリア */
 main {
   width: 60%;
   padding: 16px;
@@ -97,26 +87,24 @@ main {
   gap: 16px;
 }
 
+
 /* 各パネルの共通設定 */
 .contents > nav {
   border-radius: 18px;
   padding: 16px;
   display: flex;
   flex-direction: column;
-  min-width: 0; /* グリッドアイテムの縮小を許可 */
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  min-width: 0; 
 }
 
 .contents > nav h2 {
   text-align: center;
   font-size: 1.15rem;
   margin-bottom: 12px;
-  letter-spacing: 0.06em;
 }
 
-/* =========================================
-   1. 各種リンク (.link) - スレートブルー
-========================================= */
+
+/*リンクエリア*/
 .link {
   background-color: #3d5a80;
   grid-column: 1 / 2;
@@ -143,20 +131,17 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #293d5a; /* アイコンの白文字がくっきり映える濃紺 */
   border-radius: 12px;
   padding: 8px;
   text-decoration: none;
-  transition: transform 0.2s, background-color 0.2s;
   aspect-ratio: 1 / 1;
   width: 100%;
   min-width: 0;
-  overflow: hidden; /* 画像のはみ出しを防止 */
+  overflow: hidden;
 }
 
 .linkdiv a:hover {
-  background-color: #203149;
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
 
 .linkdiv img {
@@ -188,9 +173,8 @@ main {
   background-color: #ffffff;
 }
 
-/* =========================================
-   2. 電車運行情報 (.train) - セージグリーン
-========================================= */
+
+/* 電車運行情報 */
 .train {
   background-color: #4f7768;
   grid-column: 2 / 3;
@@ -245,9 +229,7 @@ main {
   font-weight: bold;
 }
 
-/* =========================================
-   3. 最近のトピックス (.news) - ウォームサンドベージュ
-========================================= */
+/* 最近のトピックス */
 .news {
   background-color: #e6d5b8;
   color: #2c302e;
@@ -276,12 +258,10 @@ main {
   color: #2c302e;
   text-decoration: none;
   font-size: 0.85rem;
-  transition: background-color 0.2s, transform 0.2s;
 }
 
 .news-link:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .news-img {
@@ -293,6 +273,7 @@ main {
 }
 
 .news-text {
+  /*「アメリカ中間選挙…」「永野芽郁、初プロデ…」のように2行でピタッと止めるため*/
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -300,9 +281,8 @@ main {
   line-height: 1.4;
 }
 
-/* =========================================
-   4. 面白コラム (.column) - テラコッタコーラル
-========================================= */
+
+/* コラム */
 .column {
   background-color: #c86d58;
   grid-column: 2 / 3;
@@ -324,13 +304,12 @@ main {
   text-align: center;
 }
 
-/* =========================================
-   スマホ・タブレット向けレスポンシブ設定
-========================================= */
+
+
+/* レスポンシブ設定 */
 @media screen and (max-width: 768px) {
   body {
     flex-direction: column;
-    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
   }
 
   .social {
@@ -377,14 +356,13 @@ main {
 
   .contents > nav {
     border-radius: 20px;
-    padding: 14px 10px; /* 左右の余白を少し詰めてボタン領域を確保 */
+    padding: 14px 10px;
   }
 
   .contents > nav h2 {
     font-size: 1.05rem;
   }
 
-  /* スマホでボタンがはみ出ないよう調整 */
   .linkdiv {
     gap: 8px;
   }
@@ -400,7 +378,6 @@ main {
     text-align: center;
   }
 
-  /* スマホでニュース画像が大きすぎて文字が潰れるのを軽減 */
   .news-link {
     padding: 6px 8px;
     gap: 8px;
